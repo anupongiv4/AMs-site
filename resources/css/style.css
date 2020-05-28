@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    min-width: 1200px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: #2a2a2a;
+    justify-content: space-between;
+}
+
+nav .my-logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.my-logo .logo img {
+    width: 50px;
+    margin: 0 10px;
+    transition: background-color, border-radius 1.5s ease;
+    border-radius: 25px;
+}
+
+.my-logo .logo img:hover {
+    background-color: rgb(148, 147, 147);
+    border-radius: 5px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 0 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 1s linear;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #c5c5c5;
+    transition: color 0.5s ease;
+}
+
+ul li:hover {
+    border-radius: 10px;
+    background-color: #6b6b6b;
+}
+
+ul li a:hover {
+    color: white;
+}
+
+@media only screen and (max-width: 414px) {
+    nav {
+        min-width: 320px;
+        display: flex;
+        
+        justify-content: center;
+    }
+
+    nav .my-logo {
+        display: none;
+    }
+
+    ul {
+        margin-right: 0;
+    }
+
+    ul li {
+        margin: 0 15px;
+    }
+
+    ul li a {
+        font-size: 30px;
+    }
+}
+
+/* Banner */
+
+.banner-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+    width: 100%;
+    height: 1400px;
+}
+
+.banner-container .upper {
+    background-color: #2a2a2a;
+    grid-area: 1 / 1 / span 10 / span 12;
+}
+
+.banner-container .upper h1 {
+    margin-top: 80px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.banner-container .upper p {
+    margin-top: 30px;
+    text-align: center;
+    color: #c5c5c5;
+    font-size: 30px;
+}
+
+.phone-img {
+    grid-area: 9 / 2 / span 7 / span 2;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+.phone-img img {
+    width: 200px;
+}
+
+.banner-container .lower {
+    grid-area: 11 / 1 / span 14 / span 12;
+}
+
+.lower h1 {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 50px;
+    z-index: 10;
+}
+
+.text-below {
+    grid-area: 19 / 2 / span 1 / span 2;
+    font-size: 40px;
+    text-align: center;
+}
+
+.text-below-1 {
+    grid-area: 22 / 2 / span 1 / span 2;
+    font-size: 40px;
+    text-align: center;
+}
+
+.first-details {
+    grid-area: 15 / 6 / span 1 / span 5;
+    display: flex;
+    align-items: center;
+}
+
+.first-details img{
+    width: 50px;
+    margin-right: 40px;
+}
+
+.first-details p {
+    font-size: 20px;
+}
+
+.second-details {
+    grid-area: 18 / 6 / span 1 / span 5;
+    display: flex;
+    align-items: center;
+}
+
+.second-details img {
+    width: 50px;
+    margin-right: 40px;
+}
+
+.second-details p {
+    font-size: 20px;
+}
+
+.third-details {
+    grid-area: 21 / 6 / span 1 / span 5;
+    display: flex;
+    align-items: center;
+}
+
+.third-details img {
+    width: 50px;
+    margin-right: 40px;
+}
+
+.third-details p {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 414px) {
+    .banner-container .upper h1 {
+        margin-top: 130px;
+        font-size: 50px;
+    }
+
+    .first-details p {
+        font-size: 32px;
+    }
+
+    .second-details p {
+        font-size: 32px;
+    }
+
+    .third-details p {
+        font-size: 32px;
+    }
+}
+
+/* Example Projects */
+
+.example-project {
+    width: 100%;
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.example-project h1 {
+    text-align: center;
+    grid-area: 2 / 5 / span 1 / span 4;
+    font-size: 50px;
+}
+
+.top-border {
+    grid-area: 1 / 5 / span 1 / span 4;
+    border-top: 1px solid black;
+}
+
+.example-project .project-1-pic {
+    background-color: rgb(65, 65, 65);
+    grid-area: 4 / 4 / span 3 / span 3;
+}
+
+.example-project .project-1-text {
+    grid-area: 5 / 6 / span 3 / span 3;
+    font-size: 40px;
+}
+
+.example-project .project-2-pic {
+    background-color: rgb(65, 65, 65);
+    grid-area: 7 / 7 / span 3 / span 3;
+}
+
+.example-project .project-2-text {
+    grid-area: 8 / 6 / span 3 / span 3;
+    font-size: 40px;
+}
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: white;
+}
